@@ -1,5 +1,5 @@
 .project_particles {
-    z-index: 9999;
+    z-index: 0;
     position: relative;
     height: 90vh;
 }
@@ -15,4 +15,5 @@
     position: absolute;
     width: 100%;
     top: 45%;
+    z-index: 1;
 }

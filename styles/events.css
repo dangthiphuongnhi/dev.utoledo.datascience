@@ -1,0 +1,12 @@
+
+
+.event_particles{
+    z-index: 9999;
+    position: relative;
+    height: 90vh;
+}
+
+.intro p {
+    margin-top: 300px;
+    margin-left: 600px;
+}

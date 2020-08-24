@@ -43,6 +43,7 @@ main {
     place-items: center;
     overflow: auto;
     position: absolute;
+    width: 100%;
 }
 
 .child {

@@ -51,6 +51,14 @@ main {
     top: 30%;
 }
 
+.parenthome .intro .brand{
+    z-index: 9999;
+}
+
+    .parenthome .intro p {
+        z-index: 9999;
+    }
+
 .child {
     padding: 0.5rem;
     border-radius: 10px;
@@ -73,9 +81,9 @@ a {
     z-index: 1000;
 }
 
-video {
-    max-height: 100%;
-    max-width: 100%; /*177.77777778vh; */ /* 100 * 16 / 9 */
+.index_particles {
+    height: 100%;
+    width: 100%; /*177.77777778vh; */ /* 100 * 16 / 9 */
     object-fit: cover;
 }
 

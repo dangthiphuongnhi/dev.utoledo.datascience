@@ -38,19 +38,14 @@ main {
     grid-column: 1 / 4;
     color: white;
     z-index: 9999;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
 }
 
 .parenthome {
-    display: grid;
-    place-items: center;
-    overflow: auto;
-    position: absolute;
-    width: 100%;
-    top: 30%;
-    padding-bottom: 1.5rem;
+    box-sizing: border-box;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .parenthome .intro .brand{

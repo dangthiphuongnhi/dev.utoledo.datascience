@@ -18,17 +18,28 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
-.contact_particles {
-    height: 90vh;
+.particle_Wrapper {
+    opacity: 0.8;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
 }
 
-
+.contact_particles {
+    height: 100%;
+    width: 100%; /*177.77777778vh; */ /* 100 * 16 / 9 */
+    object-fit: cover;
+}
 
 #header {
     background: rgb(54, 53, 53);
     padding: 0.8rem;
     grid-column: 1 / 4;
     color: white;
+    z-index: 9999;
 }
 
 main {
@@ -42,6 +53,7 @@ main {
     text-align: center;
     grid-column: 1 / 4;
     color: white;
+    z-index: 9999;
 }
 
 a {
@@ -49,20 +61,14 @@ a {
     color: white;
 }
 
-
-
 .wrapper {
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-    background: url(contact.jpg) no-repeat;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -45%;
 }
-
-
 
 .contact-section {
     width: 100%;
@@ -77,7 +83,7 @@ a {
     max-width: 500px;
     line-height: 65px;
     padding-left: 50px;
-    font-size: 18px;
+    font-size: 17px;
     margin-top: -50px;
 }
 
@@ -191,10 +197,45 @@ a {
         .contact-form .text-box {
             width: 96.2%;
         }
+
+    .wrapper {
+        margin-top: 15%;
+    }
+
+    .alert-success.expand {
+        display: block;
+        z-index: 1;
+        background: #FFF3CD;
+        font-size: 17px;
+        padding: 10px 20px;
+        min-width: 420px;
+        position: absolute;
+        right: 0;
+        top: 10px;
+        border-left: 8px solid #FFA502;
+        border-right: 8px solid #FFA502;
+        border-radius: 4px;
+        margin-top: 40%;
+    }
+
+    .alert-error.expand {
+        display: block;
+        z-index: 1;
+        background: #FFF3CD;
+        font-size: 18px;
+        padding: 10px 20px;
+        min-width: 420px;
+        position: absolute;
+        right: 0;
+        top: 10px;
+        border-left: 8px solid #FFA502;
+        border-right: 8px solid #FFA502;
+        border-radius: 4px;
+        margin-top: 40%;
+    }
 }
 
 /*css for alert messages*/
-
 .alert-success {
     display: none;
 }

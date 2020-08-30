@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DS-UT</title>
+    <title>Dev DS-UT</title>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
     <script src="https://smtpjs.com/v3/smtp.js"></script>
@@ -43,15 +43,29 @@
         $(document).ready(function () {
             $(".send-btn").click(function () {
                 if (document.getElementById("name").value == "" || document.getElementById("myText").value == "") {
-                    $(".alert-error").toggleClass("expand");
-                    $(".alert-error").fadeOut(4000, function () {
-                        $(this).remove();
-                    });
+                    if (window.outerWidth <= 950) {
+                        $(".alert-error").toggleClass("expand2");
+                        $(".alert-error").fadeOut(4500, function () {
+                            $(this).remove();
+                        });
+                    } else {
+                        $(".alert-error").toggleClass("expand1");
+                        $(".alert-error").fadeOut(4500, function () {
+                            $(this).remove();
+                        });
+                    }                    
                 } else {
-                    $(".alert-success").toggleClass("expand");
-                    $(".alert-success").fadeOut(4000, function () {
-                        $(this).remove();
-                    });
+                    if (window.outerWidth <= 950) {
+                        $(".alert-success").toggleClass("expand2");
+                        $(".alert-success").fadeOut(4000, function () {
+                            $(this).remove();
+                        });
+                    } else {
+                        $(".alert-success").toggleClass("expand1");
+                        $(".alert-success").fadeOut(4000, function () {
+                            $(this).remove();
+                        });
+                    }                    
                 }
             });
         });
@@ -82,18 +96,20 @@
             <div id="particle_effects" class="contact_particles"></div>
             <script type="text/javascript" src="js/particle_effect/particles.js"></script>
             <script type="text/javascript" src="js/particle_effect/particle_effect.js"></script>
-        </div>        
-        <div class="wrapper">
-            <!--alert messages start-->
-            <div id="success" class="alert-success">
-                <span id="sucess">Message Sent! Thank you for contacting us.</span>
-            </div>
-            <div id="error" class="alert-error">
-                <span>Your name or your message cannot be blank! Please try again.</span>
-            </div>
-            <!--alert messages end-->
+        </div>
+        <div class="wrapper">            
             <!--contact page start-->
             <div class="contact-section">
+                <div class="notifications">
+                    <!--alert messages start-->
+                    <div id="success" class="alert-success">
+                        <span id="sucess">Message Sent! Thank you for contacting us.</span>
+                    </div>
+                    <div id="error" class="alert-error">
+                        <span>One of your inputs cannot be blank! Please try again.</span>
+                    </div>
+                    <!--alert messages end-->
+                </div>
                 <div class="contact-info">
                     <div><i class="fas fa-map-marker-alt"></i>2801 Bancroft St, Toledo, OH 43606</div>
                     <div><i class="fas fa-envelope"></i>datasciencetutoledo@gmail.com</div>

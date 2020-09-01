@@ -12,6 +12,52 @@
     <link rel="stylesheet" href="styles/events.css" />
 </head>
 <body>
+    <style>
+        @media (max-width: 550px) {
+            .big-container {
+                display: none;
+            }
+        }
+
+        @media (min-width: 550px) {
+            .small-container {
+                display: none;
+            }
+        }
+        /* Responsive iFrame */
+        .responsive-iframe-container {
+            position: relative;
+            padding-bottom: 36%;
+            padding-top: 30px;
+            height: 0;
+            overflow: hidden;
+        }
+
+            .responsive-iframe-container iframe,
+            .vresponsive-iframe-container object,
+            .vresponsive-iframe-container embed {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+        .big-container {
+            margin-top: 3%;
+            margin-bottom: 3%;
+            margin-left: 3%;
+            width: 700px;
+        }
+
+        .small-container {
+            padding-bottom: 36%;
+            margin-top: 3%;
+            margin-bottom: 3%;
+            margin-left: 3%;
+            width: 455px
+        }
+    </style>
     <div id="header">
         <button type="button" class="navButton">🞬</button>
         <ul>
@@ -39,10 +85,24 @@
             <script type="text/javascript" src="js/particle_effect/particles.js"></script>
             <script type="text/javascript" src="js/particle_effect/particle_effect.js"></script>
         </div>
-        <div class="parentevents">
-            <div class="child">
-                <div class="intro">
-                    <p>Events coming soon !!!</p>
+        <div class="calendar-wrapper">
+            <div class="responsive-iframe-container big-container">
+                <iframe src="https://calendar.google.com/calendar/embed?src=utoledo.datascience%40gmail.com&ctz=America%2FNew_York" style="border-width:0" width="100%" height="650" frameborder="0" scrolling="no"></iframe>
+            </div>
+            <div class="responsive-iframe-container small-container">
+                <iframe src="https://calendar.google.com/calendar/embed?src=utoledo.datascience%40gmail.com&ctz=America%2FNew_York" style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+            </div>
+            <div class="event-list">
+                <h2>Upcoming Events</h2>
+                <div class="test">
+                    <ul>
+                        <li>- 00/00/0000: Coffee</li>
+                        <li>- 00/00/0000: Tea</li>
+                        <li>- 00/00/0000: Milk</li>
+                        <li>- 00/00/0000: Coffee</li>
+                        <li>- 00/00/0000: Tea</li>
+                        <li>- 00/00/0000: Milk</li>
+                    </ul>
                 </div>
             </div>
         </div>

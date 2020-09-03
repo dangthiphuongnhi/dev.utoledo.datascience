@@ -265,15 +265,12 @@ a {
         display: block;
         z-index: 1;
         background: #FFF3CD;
-        font-size: 15px;
-        padding: 20px;
+        font-size: 18px;
+        padding: 20px 40px;
         min-width: 420px;
-        position: absolute;
-        right: 0;
-        top: 20%;
+        margin: auto;
         border-left: 8px solid #FFA502;
         border-right: 8px solid #FFA502;
         border-radius: 4px;
-        margin-top: 50px;
-        text-align: center;
+        margin: 0 auto;
     }
